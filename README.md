@@ -5,6 +5,10 @@ API version will likely be changed at GA.
 
 Only cyclonedx+json format is supported.
 
+## Requirement
+
+- install **httpie** (https://httpie.io/)
+
 ## Usage
 
 ```
