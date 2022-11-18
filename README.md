@@ -3,6 +3,8 @@
 This API is Open beta as of 2022/11/18. 
 API version will likely be changed at GA.
 
+Only cyclonedx+json format is supported.
+
 ## Usage
 
 ```
