@@ -18,6 +18,7 @@ VERSION=2022-04-06~experimental
 
 #set -x
 
+# Get organization ID
 ORG_ID=$(http --body \
   https://api.snyk.io/rest/orgs \
   Authorization:"token $SNYK_TOKEN" \
@@ -29,6 +30,7 @@ if [[ ${ORG_ID} = "null" ]]; then
   exit 1
 fi
 
+# Get project ID
 PROJECT_ID=$(http --body \
   https://api.snyk.io/rest/orgs/${ORG_ID}/projects \
   Authorization:"token $SNYK_TOKEN" \
@@ -40,6 +42,7 @@ if [[ ${PROJECT_ID} = "null" ]]; then
   exit 1
 fi
 
+# Call SBOM API 
 http --body \
   https://api.snyk.io/rest/orgs/${ORG_ID}/projects/${PROJECT_ID}/sbom \
   Authorization:"token ${SNYK_TOKEN}" \
