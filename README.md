@@ -4,6 +4,7 @@ This API is Open beta as of 2022/11/18.
 API version will likely be changed at GA.
 
 *Current restrictions:*
+- You need paid subscription to try API.
 - Only cyclonedx+json format is supported.
 - Only Snyk Opensource project is supported.
 

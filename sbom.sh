@@ -16,7 +16,7 @@ SNYK_TOKEN=$(cat ~/.config/configstore/snyk.json | jq -r '.api')
 #VERSION=2021-06-01~experimental
 VERSION=2022-04-06~experimental
 
-# set -x
+#set -x
 
 ORG_ID=$(http --body \
   https://api.snyk.io/rest/orgs \
