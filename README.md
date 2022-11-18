@@ -3,7 +3,9 @@
 This API is Open beta as of 2022/11/18. 
 API version will likely be changed at GA.
 
-Only cyclonedx+json format is supported.
+*Current restrictions:*
+- Only cyclonedx+json format is supported.
+- Only Snyk Opensource project is supported.
 
 ## Requirement
 
