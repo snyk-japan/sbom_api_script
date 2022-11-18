@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ $# -ne 2 ]
-	then
-		echo 'Needs to supply argument'
-		echo '  $1 = Organization'
-		echo '  $2 = Project'
-		exit 1
+  then
+    echo 'Needs to supply argument'
+    echo '  $1 = Organization'
+    echo '  $2 = Project'
+    exit 1
 fi
 
 ORG=${1}
@@ -19,10 +19,10 @@ VERSION=2022-04-06~experimental
 #set -x
 
 ORG_ID=$(http --body \
-	https://api.snyk.io/rest/orgs \
+  https://api.snyk.io/rest/orgs \
   Authorization:"token $SNYK_TOKEN" \
   version==${VERSION} \
-	slug==${ORG} | jq -r '.data[0].id')
+  slug==${ORG} | jq -r '.data[0].id')
 
 if [[ ${ORG_ID} = "null" ]]; then
   echo "Org not found"
@@ -30,10 +30,10 @@ if [[ ${ORG_ID} = "null" ]]; then
 fi
 
 PROJECT_ID=$(http --body \
-	https://api.snyk.io/rest/orgs/${ORG_ID}/projects \
+  https://api.snyk.io/rest/orgs/${ORG_ID}/projects \
   Authorization:"token $SNYK_TOKEN" \
-	origin==github \
-	name==${PROJECT} \
+  origin==github \
+  name==${PROJECT} \
   version==${VERSION} | jq -r '.data[0].id')
 
 if [[ ${PROJECT_ID} = "null" ]]; then
