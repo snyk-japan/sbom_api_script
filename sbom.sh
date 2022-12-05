@@ -11,7 +11,13 @@ fi
 ORG=${1}
 PROJECT=${2}
 
-SNYK_TOKEN=$(cat ~/.config/configstore/snyk.json | jq -r '.api')
+#SNYK_TOKEN=$(cat ~/.config/configstore/snyk.json | jq -r '.api')
+SNYK_TOKEN=$(snyk config get api)
+
+if [[ ${SNYK_TOKEN} = "null" ]]; then
+  echo "No snyk token found. Please run 'snyk auth' first"
+  exit 1
+fi
 
 #VERSION=2021-06-01~experimental
 VERSION=2022-04-06~experimental
