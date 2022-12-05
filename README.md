@@ -11,12 +11,20 @@ API version will likely be changed at GA.
 ## Requirement
 
 - install **httpie** (https://httpie.io/)
+- install **bomber** (https://github.com/devops-kung-fu/bomber)
 
 ## Usage
+
+To generate SBOM.
 
 ```
 ./sbom <Org name> <Project name>
 ```
+
+To scan SBOM.
+
+```
+./bomber.sh 
 
 Where:
 - `Org name` is something like `masatomo.ito-qx0` (Note: It's organization name **NOT display name**)
