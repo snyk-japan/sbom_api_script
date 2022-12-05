@@ -15,21 +15,35 @@ API version will likely be changed at GA.
 
 ## Usage
 
-To generate SBOM.
+### To generate SBOM.
 
 ```
 ./sbom <Org name> <Project name>
 ```
 
-To scan SBOM.
-
-```
-./bomber.sh 
-
 Where:
 - `Org name` is something like `masatomo.ito-qx0` (Note: It's organization name **NOT display name**)
 - `Project name` is something like `masa-snyk/goof:package.json` 
 
-## Example
+#### Example
 
+```
 ./sbom.sh finance-svs "shawnsnyk/goof:package.json"
+```
+
+### To scan SBOM.
+
+```
+./bomber.sh <username> <SBOM File>
+```
+
+Where:
+- `username` is an username for Snyk.
+- `SBOM File` is a path to SBOM file.
+
+#### Exaample
+
+```
+./bomber "Masa Ito" sbom.json
+```
+
