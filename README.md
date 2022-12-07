@@ -18,7 +18,7 @@ API version will likely be changed at GA.
 ### To generate SBOM.
 
 ```
-./sbom <Org name> <Project name>
+./sbom.sh <Org name> <Project name>
 ```
 
 Where:

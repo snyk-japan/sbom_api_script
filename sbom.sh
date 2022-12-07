@@ -53,6 +53,6 @@ http --body \
   https://api.snyk.io/rest/orgs/${ORG_ID}/projects/${PROJECT_ID}/sbom \
   Authorization:"token ${SNYK_TOKEN}" \
   version==${VERSION} \
-  format==cyclonedx+json
+  format==cyclonedx+json 
 
 exit 0
