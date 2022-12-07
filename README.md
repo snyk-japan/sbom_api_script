@@ -12,6 +12,7 @@ API version will likely be changed at GA.
 
 - install **httpie** (https://httpie.io/)
 - install **bomber** (https://github.com/devops-kung-fu/bomber)
+- Run `snyk auth` before hand
 
 ## Usage
 
